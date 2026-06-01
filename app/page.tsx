@@ -3,6 +3,7 @@
 import { Navigation } from '@/components/Navigation'
 import { Sidebar } from '@/components/Sidebar'
 import { MainContent } from '@/components/MainContent'
+import { Footer } from '@/components/Footer'
 
 export default function Home() {
   return (
@@ -24,6 +25,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
+
     </div>
   )
 }

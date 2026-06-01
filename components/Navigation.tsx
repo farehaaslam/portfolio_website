@@ -1,7 +1,8 @@
 'use client'
 
-import { Search, Menu } from 'lucide-react'
+import { Download, Menu } from 'lucide-react'
 import { useState } from 'react'
+import Image from 'next/image'
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -12,7 +13,13 @@ export function Navigation() {
         <div className="flex items-center gap-8">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-background font-bold text-sm">
-              FA
+              <Image
+                src="/cat.jpg"
+                alt="Fareha Aslam"
+                width={32}
+                height={32}
+                className="rounded-full object-cover"
+              />
             </div>
             <span className="text-white font-semibold">Fareha</span>
           </div>
@@ -28,11 +35,15 @@ export function Navigation() {
         </div>
 
         <div className="flex items-center gap-4">
-          <div className="hidden md:flex items-center gap-2 bg-muted/50 px-3 py-2 rounded-full border border-border">
-            <Search className="w-4 h-4 text-muted-foreground" />
-            <span className="text-xs text-muted-foreground">Ctrl+K</span>
-          </div>
-
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-background font-semibold hover:bg-white/90 transition-colors"
+          >
+            <Download className="w-4 h-4" />
+            Resume
+          </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 hover:bg-muted rounded-lg transition-colors"
@@ -49,6 +60,15 @@ export function Navigation() {
           </a>
           <a href="#experience" className="text-muted-foreground hover:text-foreground transition-colors">
             Experience
+          </a>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white text-background font-semibold hover:bg-white/90 transition-colors"
+          >
+            <Download className="w-4 h-4" />
+            Resume
           </a>
         </div>
       )}
