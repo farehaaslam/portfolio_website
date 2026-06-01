@@ -3,6 +3,7 @@
 import { ExperienceSection } from './sections/ExperienceSection'
 import { ProjectsSection } from './sections/ProjectsSection'
 import { EducationSection } from './sections/EducationSection'
+import { AboutMeSection } from './sections/AboutMeSection'
 
 export function MainContent() {
   return (
@@ -26,6 +27,9 @@ export function MainContent() {
           Resume
         </button>
       </div>
+
+      {/* About Me Section */}
+      <AboutMeSection />
 
       {/* Experience Section */}
       <ExperienceSection />
