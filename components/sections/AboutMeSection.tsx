@@ -9,38 +9,37 @@ interface Pillar {
 const pillars: Pillar[] = [
   {
     title: 'Deep Learning & NLP',
-    description: 'Experimenting with open-source AI and multimodal systems',
+    description: 'Mastering the core neural architectures and mathematical foundations of AI.',
     approach: [
-      'Large language models and localized embeddings',
-      'Audio transcription frameworks',
-      'Offline-first intelligent agents'
+      'Implementing backpropagation, custom loss functions, and optimization loops',
+      'learning sequence-to-sequence model from rnn to transformer',
+      'transfer learning and fine-tuning techniques for LLMs and domain-specific applications',
     ]
+  },
+  {
+    title: 'AI Engineering & Applied LLMs',
+    description: 'Building practical systems powered by cutting-edge language models.',
+    approach: [
+      'Architecting advanced Retrieval-Augmented Generation (RAG) and semantic indexes',
+'Orchestrating hybrid execution workflows leveraging local runtimes  and cloud inference ',
+      'Ai agent like claude '],
   },
   {
     title: 'MLOps & Cloud Pipelines',
-    description: 'Production-grade deployment at scale',
+    description: 'Moving models from local notebooks to production environments.',
     approach: [
-      'MLflow model versioning and tracking',
-      'Docker containerization & FastAPI services',
-      'AWS automation and CI/CD pipelines'
+      'Experiment tracking and versioning with MLflow and DagsHub',
+      'Containerizing services with Docker and FastAPI',
+      'Automating infrastructure via CI/CD pipelines to AWS (EC2/ECR/S3)'
     ]
   },
   {
-    title: 'Full-Stack Dev (MERN)',
-    description: 'Building responsive, maintainable web applications',
+    title: 'Core CS & Problem Solving',
+    description: 'Relying on strong computer science fundamentals for every build.',
     approach: [
-      'Clean, scalable architecture patterns',
-      'Secure authentication flows',
-      'Highly responsive user interfaces'
-    ]
-  },
-  {
-    title: 'Core CS (DSA & OOP)',
-    description: 'Strong theoretical foundation for every solution',
-    approach: [
-      'Data Structures & Algorithms mastery',
-      'Object-Oriented Programming principles',
-      'Operating Systems and DBMS fundamentals'
+      'Applying advanced Data Structures & Algorithms (DSA)',
+      'Writing modular code using Object-Oriented principles',
+      'Understanding internal mechanics of DBMS and OS environments'
     ]
   }
 ]
@@ -51,11 +50,10 @@ export function AboutMeSection() {
       {/* Section Header */}
       <div>
         <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">About Me</h2>
-        <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl">
-          I am a Computer Engineering student at Jamia Millia Islamia with a core focus on Deep Learning, 
-          Natural Language Processing, and scalable web architecture. My development philosophy centers on 
-          efficiency, local-first intelligence, and deployment rigor—bridging complex algorithmic problem-solving 
-          with modern software engineering.
+                      <div className="h-1 w-16 bg-white rounded-full mb-5" />
+
+        <p className="text-base md:text-md text-muted-foreground leading-relaxed max-w-2xl">
+          I am a final-year Computer Engineering student at Jamia Millia Islamia focusing on applied AI, deep learning, and MLOps. I love building practical AI applications that solve real-world problems. I back my systems with automated, production-ready MLOps pipelines ensuring reliable data flow, efficient local or cloud execution, and seamless deployment.
         </p>
       </div>
 
@@ -82,8 +80,6 @@ export function AboutMeSection() {
           </div>
         ))}
       </div>
-
-
     </section>
   )
 }

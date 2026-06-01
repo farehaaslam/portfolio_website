@@ -12,25 +12,28 @@ interface Project {
 export function ProjectsSection() {
 
   const projects: Project[] = [
-    {
-      title: 'gUrrT: Local-First Video Intelligence Engine',
-      tech: ['Python', 'CLIP', 'BLIP', 'Faster-Whisper', 'Ollama', 'Vector DB', 'LLMs'],
-      description: [
-        'Engineered a local-first video retrieval pipeline integrating scene-based frame sampling, captioning, ASR transcription, and semantic indexing.',
-        'Enabled dynamic inference via locally installed Ollama models with optional cloud fallback (Llama 3-70B via Groq).',
-        'Achieved 793 downloads within 24 hours of PyPI launch.',
-      ],
-      link: 'https://pypi.org',
-    },
-    {
-      title: 'Phishing Website Detection System (End-to-End MLOps Pipeline)',
-      tech: ['Python', 'scikit-learn', 'MLflow', 'FastAPI', 'Docker', 'AWS', 'GitHub Actions'],
-      description: [
-        'Built a production-grade end-to-end MLOps pipeline (Ingestion → Validation → Transformation → Training → Deployment) with MLflow for experiment tracking.',
-        'Deployed containerized FastAPI inference services via CI/CD pipelines to AWS EC2.',
-        'Implemented automated testing and model monitoring for production reliability.',
-      ],
-    },
+    
+    
+  {
+  title: 'Network Security — Phishing Detection System',
+  tech: ['Python', 'Scikit-Learn', 'MLflow', 'FastAPI', 'MongoDB', 'AWS', 'Docker', 'GitHub Actions'],
+  description: [
+    'Built an end-to-end production ML system classifying websites using 31 URL features across 11,000+ labeled records, achieving optimal performance via GridSearchCV hyperparameter tuning.',
+    'Engineered an automated pipeline featuring MongoDB data ingestion, automated schema validation, and Kolmogorov-Smirnov statistical testing for data drift detection.',
+    'Developed a containerized FastAPI REST API deployed via GitHub Actions CI/CD pipelines to AWS (EC2/ECR) with automated weekly cron-job retraining workflows.',
+  ],
+  link: 'https://github.com/farehaaslam/network_security',
+},
+{
+  title: 'gUrrT — Intelligent Video Understanding System',
+  tech: ['Python', 'CLIP', 'BLIP', 'Faster-Whisper', 'Ollama', 'Llama 3', 'FastAPI', 'Vector Databases'],
+  description: [
+    'Co-engineered an open-source multimodal framework that parses video files into structured, queryable indexes to bypass heavy temporal modeling processing.',
+    'Architected a dual-stage frame pipeline combining scene detection, Faster-Whisper audio transcription, and BLIP/CLIP image-to-text embedding generation.',
+    'Developed a local and cloud RAG backend (Ollama/Groq) leveraging vector-based contexts for real-time semantic video querying and holistic abstractive summarization.',
+  ],
+  link: 'https://github.com/farehaaslam/gurrt',
+},
     {
       title: 'Local Voice AI Agent',
       tech: ['Python', 'Ollama', 'Llama 3.1', 'Faster-Whisper', 'Gradio'],
@@ -39,8 +42,30 @@ export function ProjectsSection() {
         'Designed a full-stack web UI with Gradio featuring live processing states and streaming audio uploads.',
         'Optimized inference performance for real-time voice processing on consumer hardware.',
       ],
+      link: 'https://github.com/farehaaslam/voice_agent',
+    },
+  
+    {
+      title: 'Machine Learning Engineering Portfolio',
+      tech: ['Python', 'NumPy', 'Pandas', 'Scikit-Learn', 'Jupyter Notebooks', 'Matplotlib'],
+      description: [
+        'Engineered 20+ supervised, unsupervised, and ensemble algorithms entirely from scratch using native Python and NumPy mathematical foundations.',
+        'Implemented optimization mechanics (gradient descent, loss functions, and splitting criteria) for custom models like Logistic Regression, SVM, and Decision Trees.',
+        'Developed end-to-end data pipelines for predictive analytics, evaluation metric benchmarking, and computer vision using MNIST and medical classification datasets.',
+      ],
+      link: 'https://github.com/farehaaslam/Machine-Learning',
     },
     {
+  title: 'Website Automation Agent',
+  tech: ['JavaScript', 'OpenAI SDK', 'Playwright', 'Zod', 'Node.js'],
+  description: [
+    'Built an intelligent AI-powered web automation agent using OpenAI Agents framework to autonomously interact with web interfaces.',
+    'Implemented comprehensive browser automation tools including form filling (by label, placeholder, and ID), website navigation, screenshots, and element clicking.',
+    'Engineered custom tool definitions with Zod schema validation for type-safe parameter passing between the AI agent and browser automation operations.',
+  ],
+  link: 'https://github.com/farehaaslam/Website-automation-agent',
+},
+      {
       title: 'Code Tracker',
       tech: ['React', 'ShadCN UI', 'Recharts', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'JWT'],
       description: [
@@ -48,6 +73,7 @@ export function ProjectsSection() {
         'Designed an interactive dashboard using Recharts to visualize daily progress and coding consistency.',
         'Implemented responsive UI with ShadCN components for seamless user experience across devices.',
       ],
+      link: 'https://codetracker-khaki.vercel.app/',
     },
   ]
 
@@ -55,8 +81,9 @@ export function ProjectsSection() {
     <section id="projects" className="space-y-8">
       <div>
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Featured Projects</h2>
-        <div className="h-1 w-16 bg-white rounded-full" />
-      </div>
+                              <div className="h-1 w-16 bg-white rounded-full mb-5" />
+
+    </div>
 
       <div className="space-y-4">
         {projects.map((project, idx) => (
@@ -71,7 +98,14 @@ export function ProjectsSection() {
                     {project.title}
                   </h3>
                   {project.link && (
-                    <ExternalLink className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:text-blue-300 underline"
+                    >
+                      <ExternalLink className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+                    </a>
                   )}
                 </div>
               </div>
