@@ -7,7 +7,7 @@ import { AboutMeSection } from './sections/AboutMeSection'
 
 export function MainContent() {
   return (
-    <main className="w-full md:w-[65%] px-6 md:px-8 md:pl-0 py-8 space-y-16 md:space-y-20">
+    <main className="space-y-16 md:space-y-20">
       {/* Mobile Bio */}
       <div className="md:hidden">
         <p className="text-sm text-muted-foreground leading-relaxed">
