@@ -4,6 +4,7 @@ import { ExperienceSection } from './sections/ExperienceSection'
 import { ProjectsSection } from './sections/ProjectsSection'
 import { EducationSection } from './sections/EducationSection'
 import { AboutMeSection } from './sections/AboutMeSection'
+import { GitHubActivitySection } from './sections/GitHubActivitySection'
 
 export function MainContent() {
   return (
@@ -36,6 +37,9 @@ export function MainContent() {
 
       {/* About Me Section */}
       <AboutMeSection />
+
+      {/* GitHub Activity Section */}
+      <GitHubActivitySection />
 
       {/* Education Section */}
       <EducationSection />

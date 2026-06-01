@@ -83,13 +83,7 @@ export function AboutMeSection() {
         ))}
       </div>
 
-      {/* Achievement Badge */}
-      <div className="flex items-center justify-center mt-10 pt-6 border-t border-border/50">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/60 border border-border/50 text-sm text-muted-foreground hover:bg-background/80 transition-colors">
-          <span>⚡</span>
-          <span>Solved 500+ Data Structures & Algorithms questions cross-platform</span>
-        </div>
-      </div>
+
     </section>
   )
 }
