@@ -1,7 +1,6 @@
 'use client'
 
-import { ChevronRight, ExternalLink } from 'lucide-react'
-import { useState } from 'react'
+import { ExternalLink } from 'lucide-react'
 
 interface Project {
   title: string
@@ -11,7 +10,6 @@ interface Project {
 }
 
 export function ProjectsSection() {
-  const [expandedProject, setExpandedProject] = useState<number | null>(0)
 
   const projects: Project[] = [
     {
@@ -64,47 +62,38 @@ export function ProjectsSection() {
         {projects.map((project, idx) => (
           <div
             key={idx}
-            onClick={() => setExpandedProject(expandedProject === idx ? null : idx)}
-            className="group border border-border rounded-lg p-4 md:p-6 hover:border-foreground/50 hover:bg-muted/30 transition-all cursor-pointer"
+            className="border border-border rounded-lg p-4 md:p-6 hover:border-foreground/50 hover:bg-muted/30 transition-all"
           >
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex-1 min-w-0">
+            <div className="flex items-start justify-between gap-4 mb-3">
+              <div className="flex-1">
                 <div className="flex items-center gap-2">
-                  <h3 className="text-lg font-semibold text-white group-hover:text-white/80 transition-colors line-clamp-2">
+                  <h3 className="text-lg font-semibold text-white">
                     {project.title}
                   </h3>
                   {project.link && (
                     <ExternalLink className="w-4 h-4 text-muted-foreground flex-shrink-0" />
                   )}
                 </div>
-
-                <div className="flex flex-wrap gap-2 mt-3">
-                  {project.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="px-2 py-1 rounded text-xs font-medium bg-muted text-foreground/70 border border-border/50"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-
-                {expandedProject === idx && (
-                  <div className="mt-4 space-y-2">
-                    {project.description.map((desc, descIdx) => (
-                      <p key={descIdx} className="text-sm text-muted-foreground leading-relaxed">
-                        • {desc}
-                      </p>
-                    ))}
-                  </div>
-                )}
               </div>
+            </div>
 
-              <ChevronRight
-                className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform ${
-                  expandedProject === idx ? 'rotate-90' : ''
-                }`}
-              />
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.tech.map((t) => (
+                <span
+                  key={t}
+                  className="px-2 py-1 rounded text-xs font-medium bg-muted text-foreground/70 border border-border/50"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+
+            <div className="space-y-2">
+              {project.description.map((desc, descIdx) => (
+                <p key={descIdx} className="text-sm text-muted-foreground leading-relaxed">
+                  • {desc}
+                </p>
+              ))}
             </div>
           </div>
         ))}
