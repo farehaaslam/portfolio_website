@@ -11,7 +11,7 @@ interface Project {
 }
 
 export function ProjectsSection() {
-  const [expandedProject, setExpandedProject] = useState<number | null>(null)
+  const [expandedProject, setExpandedProject] = useState<number | null>(0)
 
   const projects: Project[] = [
     {

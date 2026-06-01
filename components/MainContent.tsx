@@ -28,14 +28,14 @@ export function MainContent() {
         </button>
       </div>
 
-      {/* About Me Section */}
-      <AboutMeSection />
-
       {/* Experience Section */}
       <ExperienceSection />
 
       {/* Projects Section */}
       <ProjectsSection />
+
+      {/* About Me Section */}
+      <AboutMeSection />
 
       {/* Education Section */}
       <EducationSection />
