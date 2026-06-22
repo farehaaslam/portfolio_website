@@ -25,14 +25,23 @@ export function ProjectsSection() {
   link: 'https://github.com/farehaaslam/network_security',
 },
 {
-  title: 'gUrrT — Intelligent Video Understanding System',
-  tech: ['Python', 'CLIP', 'BLIP', 'Faster-Whisper', 'Ollama', 'Llama 3', 'FastAPI', 'Vector Databases'],
-  description: [
-    'Co-engineered an open-source multimodal framework that parses video files into structured, queryable indexes to bypass heavy temporal modeling processing.',
-    'Architected a dual-stage frame pipeline combining scene detection, Faster-Whisper audio transcription, and BLIP/CLIP image-to-text embedding generation.',
-    'Developed a local and cloud RAG backend (Ollama/Groq) leveraging vector-based contexts for real-time semantic video querying and holistic abstractive summarization.',
+  title: "gUrrT — Local-First Video Intelligence Engine",
+  tech: [
+    "Python",
+    "llama.cpp",
+    "GGUF",
+    "Faster-Whisper",
+    "CLIP",
+    "ChromaDB",
+    "FastAPI"
   ],
-  link: 'https://github.com/farehaaslam/gurrt',
+  description: [
+    "Open-source Video-RAG framework with 6K+ PyPI downloads for semantic video understanding and retrieval.",
+    "Built a multimodal indexing pipeline combining speech transcription, visual embeddings, and vector search for video-grounded question answering.",
+    "Integrated llama.cpp with quantized GGUF vision-language models, achieving up to 16× faster local indexing on consumer hardware.",
+    "Designed a temporal persistence filtering algorithm to reduce redundant frame captioning and improve indexing throughput."
+  ],
+  link: "https://github.com/farehaaslam/gurrt"
 },
     {
       title: 'Local Voice AI Agent',
