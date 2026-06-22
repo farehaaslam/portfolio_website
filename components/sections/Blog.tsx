@@ -7,6 +7,10 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    title:'How switching to llama.cpp made captioning 2-4X faster',
+    url:'https://medium.com/@farehaaslam25/how-switching-to-llama-cpp-made-captioning-2-4x-faster-52620c8d7fe5'
+  },
+  {
     title: 'Building a Fully Local Voice AI Agent (No APIs, No Cloud)',
     url: 'https://medium.com/@farehaaslam25/building-a-fully-local-voice-ai-agent-no-apis-no-cloud-d65639f671ee'
   },
